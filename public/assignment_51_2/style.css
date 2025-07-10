@@ -1,0 +1,26 @@
+.div_board{
+    border: 5px black solid;
+}
+.div_color{
+    background-color: green;
+}
+.h1_border{
+    border: 5px black dashed;
+}
+.div_size{
+    width: 100vh;
+    height: 80vh;
+}
+.h1_padding{
+    padding: 10px;
+}
+.h1_center{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.div_center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
