@@ -1,7 +1,10 @@
-import './App.css'
 import React, { useState } from 'react'
+import { Link, useParams } from 'react-router-dom'
+import assignments from '../info'
 
 function App() {
+  const { id } = useParams();
+  const assignment = assignments.find((a) => a.id === id);
   const [sortOption, setSortOption] = useState('default')
   const [searchTerm, setSearchTerm] = useState('')
 
@@ -38,6 +41,11 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-300">
+      {/* Assignment Notice */}
+      <h2 className="text-center text-xl font-semibold py-4">
+        This assignment does not have any id-based routing. It simply links two pages using router.
+      </h2>
+
       <div className="w-full flex justify-between items-center bg-white px-6 py-4 shadow mb-6">
         <img
           className="w-[125px] h-auto"
@@ -80,6 +88,14 @@ function App() {
                 <img src="https://codeyogi.io/grey-star.png" alt="star" />
               </div>
               <p className="text-gray-700 font-semibold">${product.price.toFixed(2)}</p>
+
+              {/* Navigate button */}
+              <Link
+                to={`/${assignment.id}/product`}
+                className="mt-2 px-4 py-1 bg-red-700 text-white rounded text-sm"
+              >
+                View Product Page
+              </Link>
             </div>
           ))}
         </div>

@@ -2,14 +2,33 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import assignments from './info.js';
 
-export default function AssignmentPage() {
+// Dynamically import React assignments
+import App from './assignment_58_1/Homepage.jsx';
+import Homepage from './assignment_59_1/Homepage.jsx'; // example
+
+export default function AssignmentPage({ addToCart, cartItems }) {
   const { id } = useParams();
-  const assignment = assignments.find(a => a.id === id);
+  const assignment = assignments.find((a) => a.id === id);
 
   if (!assignment) {
     return <p className="text-center text-red-500 mt-10">Assignment not found</p>;
   }
 
+  if (assignment.type === 'react') {
+    // Render corresponding component
+    switch (assignment.id) {
+      case 'assignment_58_1':
+        return <App />;
+      case 'assignment_59_1':
+        return <Homepage addToCart={addToCart} cartItems={cartItems} />;
+
+      // Add more react components here
+      default:
+        return <p className="text-center text-red-500 mt-10">React component not found</p>;
+    }
+  }
+
+  // Fallback to iframe for HTML-based assignments
   return (
     <div className="min-h-screen">
       <iframe
