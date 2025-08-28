@@ -5,6 +5,9 @@ import assignments from './info.js';
 // Dynamically import React assignments
 import App from './assignment_58_1/Homepage.jsx';
 import Homepage from './assignment_59_1/Homepage.jsx'; // example
+import LoginForm from './assignment_68_1/login.jsx';
+import LoginPage from './assignment_71_1/LoginPage.jsx'
+import LoginPagePrivate from './assignment_74_1/LoginPage.jsx'
 
 export default function AssignmentPage({ addToCart, cartItems }) {
   const { id } = useParams();
@@ -21,6 +24,12 @@ export default function AssignmentPage({ addToCart, cartItems }) {
         return <App />;
       case 'assignment_59_1':
         return <Homepage addToCart={addToCart} cartItems={cartItems} />;
+      case 'assignment_68_1':
+        return <LoginForm />
+      case 'assignment_71_1':
+        return <LoginPage />
+      case 'assignment_74_1':
+        return <LoginPagePrivate />
 
       // Add more react components here
       default:
