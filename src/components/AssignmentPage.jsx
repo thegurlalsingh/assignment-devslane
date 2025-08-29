@@ -8,6 +8,8 @@ import Homepage from './assignment_59_1/Homepage.jsx'; // example
 import LoginForm from './assignment_68_1/login.jsx';
 import LoginPage from './assignment_71_1/LoginPage.jsx'
 import LoginPagePrivate from './assignment_74_1/LoginPage.jsx'
+import TodoApp from './assignment_78_1/main.tsx'
+import MoodTrackerApp from './assignment_87_1/main.tsx'
 
 export default function AssignmentPage({ addToCart, cartItems }) {
   const { id } = useParams();
@@ -30,6 +32,10 @@ export default function AssignmentPage({ addToCart, cartItems }) {
         return <LoginPage />
       case 'assignment_74_1':
         return <LoginPagePrivate />
+      case 'assignment_78_1':
+        return <TodoApp />
+      case 'assignment_87_1':
+        return <MoodTrackerApp />
 
       // Add more react components here
       default:

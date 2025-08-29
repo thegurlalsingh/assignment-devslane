@@ -21,7 +21,9 @@ const assignments = [
   { id: "assignment_59_1", title: "Assignment 59.1", type: "react" },
   { id: "assignment_68_1", title: "Assignment 68.1", type: "react"},
   { id: "assignment_71_1", title: "Assignment 71.1", type: "react"},
-  { id: "assignment_74_1", title: "Assignment 74.1", type: "react"}
+  { id: "assignment_74_1", title: "Assignment 74.1", type: "react"},
+  { id: "assignment_78_1", title: "Assignment 78.1", type: "react"},
+  { id: "assignment_87_1", title: "Assignment 87.1", type: "react"}
 ];
 
 export default assignments;
