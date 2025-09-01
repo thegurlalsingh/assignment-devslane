@@ -12,9 +12,9 @@ const assignments = [
   { id: "assignment_53_1", title: "Assignment 53.1", type: "html" },
   { id: "assignment_53_2", title: "Assignment 53.2", type: "html" },
   { id: "assignment_53_3", title: "Assignment 53.3", type: "html" },
-  { id: "assignment_54_1", title: "Assignment 54.1", type: "html" },
+  { id: "assignment_54_1", title: "Assignment 54.1", type: "react" },
   { id: "assignment_55_1", title: "Assignment 55.1", type: "html" },
-  { id: "assignment_57_1", title: "Assignment 57.1", type: "html" },
+  { id: "assignment_57_1", title: "Assignment 57.1", type: "react" },
 
   // React-based assignments
   { id: "assignment_58_1", title: "Assignment 58.1", type: "react" },

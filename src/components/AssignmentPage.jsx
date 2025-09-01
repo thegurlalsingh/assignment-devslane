@@ -10,6 +10,8 @@ import LoginPage from './assignment_71_1/LoginPage.jsx'
 import LoginPagePrivate from './assignment_74_1/LoginPage.jsx'
 import TodoApp from './assignment_78_1/main.tsx'
 import MoodTrackerApp from './assignment_87_1/main.tsx'
+import AppTwo from '../components/assignment_54_1/src/App.jsx'
+import AppThree from '../components/assignment_57_1/src/App.jsx'
 
 export default function AssignmentPage({ addToCart, cartItems }) {
   const { id } = useParams();
@@ -22,6 +24,10 @@ export default function AssignmentPage({ addToCart, cartItems }) {
   if (assignment.type === 'react') {
     // Render corresponding component
     switch (assignment.id) {
+      case 'assignment_54_1':
+        return <AppTwo />;
+      case 'assignment_57_1':
+        return <AppThree />;
       case 'assignment_58_1':
         return <App />;
       case 'assignment_59_1':
